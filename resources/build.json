@@ -1,0 +1,60 @@
+{
+	"package": {
+		"name": "Customer",
+		"integrations": [
+			{
+				"integration": {
+					"excludeFromBuild": false,
+					"name": "SUBSCRIBESysCustomersTS",
+					"id": "SUBSCRIBESYSCUSTOMERSTS",
+					"version": "01.00.0000",
+					"status": "ACTIVATED",
+					"tracking": "true",
+					"trackPayload": "true",
+					"connections": [
+						{
+							"connection": {
+								"excludeFromBuild": false,
+								"id": "TS_REST",
+								"passwordTokens": [
+									"TS_PASSWORD"
+								],
+								"attachments": []
+							}
+						}
+					]
+				}
+			},
+			{
+				"integration": {
+					"excludeFromBuild": false,
+					"name": "PUBLISHSysCustomersSAP",
+					"id": "PUBLISHSYSCUSTOMERSSAP",
+					"version": "01.00.0000",
+					"status": "ACTIVATED",
+					"tracking": "true",
+					"trackPayload": "true",
+					"connections": [
+						{
+							"connection": {
+								"excludeFromBuild": false,
+								"id": "SAPADAPTER",
+								"passwordTokens": [
+									"SAP_PASSWORD"
+								],
+								"attachments": [
+									{
+										"attachment": {
+											"propertyName": "jco.conn.file",
+											"attachmentName": "SAP_Adapter_inbound_Loadbalanced.properties"
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}
