@@ -17,13 +17,13 @@ OIC_USER_PASSWORD=$4
 #set target env details
 if [ "$ENV" = "UAT" ]
 then
-	OIC_REST_BASE_URL="https://uatoicic-ruralco.aucom-east-1.oraclecloud.com"
+	OIC_REST_BASE_URL="https://uat-oic-instance.aucom-east-1.oraclecloud.com"
 elif [ "$ENV" = "PRD" ]
 then
-	OIC_REST_BASE_URL="https://prodoicic-ruralco.aucom-east-1.oraclecloud.com"
+	OIC_REST_BASE_URL="https://prod-oic-instance.aucom-east-1.oraclecloud.com"
 elif [ "$ENV" = "DEV" ]
 then
-	OIC_REST_BASE_URL="https://devoicic-ruralco.aucom-east-1.oraclecloud.com"
+	OIC_REST_BASE_URL="https://dev-oic-instance.aucom-east-1.oraclecloud.com"
 fi
 echo "Target Environment $ENV  REST API Endpoint $OIC_REST_BASE_URL"
 
